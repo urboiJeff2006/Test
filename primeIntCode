@@ -1,0 +1,30 @@
+
+public class Main
+{
+  static int i = 1;
+  static int k;
+  public static void main (String[]args)
+  {
+    boolean t = false;
+    for(;i<=100;i++){
+        t = false;
+       
+        for(k=i-1;k>=2;k--){
+            
+            if(i%k == 0 ){
+                t = true;
+                }
+                
+                //System.out.println("prime found");
+                 
+            }
+        }
+        if (!t){
+            System.out.println(i);
+        }
+            
+    }
+    
+
+  }
+
