@@ -1,13 +1,28 @@
 import java.util.Random;
 public class Main{
 static boolean swapped = true;
+ 
+static void PrintArray(int []Array2Print,int goUpUntil ){
+    for(int i = 0;i < goUpUntil;i++){
+        System.out.print(Array2Print[i] + " ,");
+    }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  public static void main(String[] args){
     Random Randint = new Random();
     int[] a = new int[10];
     for(int i = 0;i<10;i++){
         a[i] = Randint.nextInt(1000);
-        System.out.print(a[i]+",");
     }
+    PrintArray(a,10);
     
     
     
@@ -24,10 +39,8 @@ static boolean swapped = true;
         }
         
     }
-    System.out.println("orginazed list;");
-    for(int i = 0;i<10;i++){
-        System.out.print((a[i]+","));
-    }
+    System.out.println("organized list;");
+    PrintArray(a,10);
     
     
     
