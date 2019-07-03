@@ -1,0 +1,28 @@
+
+public class Main
+{
+	
+	
+	static double CalSquare(double x,int Power){
+	    double y = x;
+	    for(int i = 1;i < Power;i++){
+	        x =x*y;
+	    }
+	    return x;
+	}
+	
+	
+	
+	
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+        System.out.println("put a number to square");
+        double inputSquare = Double.parseDouble(System.console().readLine());
+        int power = Integer.parseInt(System.console().readLine());
+        System.out.println(CalSquare(inputSquare,power));
+	}
+}
