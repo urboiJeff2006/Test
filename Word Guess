@@ -1,0 +1,107 @@
+import java.util.Random;
+import java.util.Arrays;
+public class Main
+{
+	static boolean xcv = false;
+	static int guessed = 0;
+    static String[] words = new String []{"bro","minecraft","sticks","dank","goated","cracked","chinese","bodying","lit","nasty"};
+	public static void main(String[] args) {
+
+        char[] playerGuess = new char[30];
+	    for(int i = 0; i < 30;i++){
+	        playerGuess[i] = '_';
+	    }
+	    char[] GuessedWords = new char [10];
+	    int GuessedWordsIndex = 0;
+	    Random rand = new Random();
+	    
+	    int RandomNumber = rand.nextInt(9);
+		String randomWord = words[RandomNumber];
+		while (guessed< 10 ){
+		       
+		       xcv = false;
+		       System.out.println(" pick a letter ");
+		      char inserted = (System.console().readLine()).charAt(0);
+		      
+		           for(int i = 0;i < randomWord.length();i++){  
+		               if (inserted==randomWord.charAt(i)){
+		                   xcv = true;
+		                   playerGuess[i] = inserted;
+		           }    
+		        
+		}
+		
+        if(xcv ){
+		       System.out.println(" the letter you guessed is correct ");
+		}if(!xcv){
+		   System.out.println(" the letter you guessed is a faliure, like you ");
+	    }
+	    for(int i = 0; i < randomWord.length(); i++){
+		System.out.print(playerGuess[i]);
+		}
+		
+		       
+		           
+
+		  
+		  
+		  boolean guessedWord = true;
+		  //boolean endThing = false;
+		  for(int i = 0; i< randomWord.length();i++){
+		      if(playerGuess[i] ==('_')){
+		          guessedWord = false;
+		          break;
+		      }
+		      
+		  }
+		  if(guessedWord){
+		      break;
+		  }
+		  boolean zzz = false;
+		  for(int i = 0; i < 10;i++){
+		      if(GuessedWords[i] == inserted){
+		         zzz = true;
+		  }
+		  } 
+		  
+		  
+		      if(zzz){
+		           System.out.println("you already guessed that word, bruh");
+		      }else{
+		          
+		          GuessedWords[GuessedWordsIndex] = inserted;
+		          GuessedWordsIndex++;
+		      }
+		  
+		    
+		    
+		    
+		}
+		  
+		System.out.println("Time to guess, all lower case and guess your word");
+		String yee = System.console().readLine();
+		if(yee.equals(randomWord)){
+		    System.out.println("you won god dammit");
+		}else{
+		    System.out.println("you lost, you will get instant death by broomstick, the correct answer is " + randomWord);
+		}
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	}
+
+
+}
+
+
+
+
+
+
