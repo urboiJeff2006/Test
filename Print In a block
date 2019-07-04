@@ -1,0 +1,17 @@
+public class Main
+{
+	public static void main(String[] args) {
+		String printStr[] = new String[]{"Hamza","is","kinda","cracked","at","coding"};
+		System.out.println("************");
+		int spacesToInsert;
+		for(int i = 0; i < printStr.length;i++){
+		     spacesToInsert = 12-printStr[i].length()-2;
+		    String stringToAdd = "";
+		    for(int k =0; k < spacesToInsert;k++){
+		        stringToAdd = stringToAdd+" ";
+		    }
+		    System.out.println("*" + printStr[i] + stringToAdd + "*");
+		}
+		System.out.println("************");
+	}
+}
