@@ -31,14 +31,13 @@ public class Main
 		        
 		}
 		
-        if(xcv ){
-		       System.out.println(" the letter you guessed is correct ");
-		}if(!xcv){
-		   System.out.println(" the letter you guessed is a faliure, like you ");
-	    }
-	    for(int i = 0; i < randomWord.length(); i++){
-		System.out.print(playerGuess[i]);
-		}
+		
+		
+		
+		
+		
+		
+		
 		
 		       
 		           
@@ -71,9 +70,30 @@ public class Main
 		          
 		          GuessedWords[GuessedWordsIndex] = inserted;
 		          GuessedWordsIndex++;
+		          guessed++;
 		      }
 		  
 		    
+        if(xcv ){
+		       System.out.println(" the letter you guessed is correct ");
+		}if(!xcv){
+		   System.out.println(" the letter you guessed is a faliure, like you ");
+		    if(guessed == 1){ System.out.println("o"); }
+	        if(guessed == 2){ System.out.println(" o"); System.out.println("\\| "); }
+	        if(guessed == 3){ System.out.println(" o"); System.out.println("\\|/"); }
+            if(guessed == 4){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); }	
+            if(guessed == 5){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); System.out.println(" |"); } 
+            if(guessed == 6){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); System.out.println(" |"); System.out.println(" |"); }
+		    if(guessed == 7){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); System.out.println(" |"); System.out.println(" |"); System.out.println(" |"); } 
+            if(guessed == 8){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); System.out.println(" |"); System.out.println(" |"); System.out.println("/|");	}	
+            if(guessed == 9){ System.out.println(" o"); System.out.println("\\|/"); System.out.println(" |"); System.out.println(" |"); System.out.println(" |"); System.out.println("/|\\ "); }	
+		    
+		    
+		}
+	    for(int i = 0; i < randomWord.length(); i++){
+		System.out.print(playerGuess[i]);
+		}
+		
 		    
 		    
 		}
